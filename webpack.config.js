@@ -1,10 +1,14 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
+//const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 //const webpack = require('webpack'); //to access built-in plugins
 
+
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    app: {
+      dependOn: 'index',
+      import: './src/index.js',
+    }
+  }
 
-  module: {},
-
-  plugins: [new HtmlWebpackPlugin({template: './src/index.html'})]
 }

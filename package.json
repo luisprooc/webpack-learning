@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --mode development"
+    "dev": "webpack --mode development",
+    "start:build": "webpack --mode production -c ./webpack.prod.js",
+    "start:dev": "webpack --mode development -c ./webpack.dev.js -w"
   },
   "repository": {
     "type": "git",
