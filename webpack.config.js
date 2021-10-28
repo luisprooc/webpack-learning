@@ -1,6 +1,6 @@
 //const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 //const webpack = require('webpack'); //to access built-in plugins
-
+const path = require('path');
 
 module.exports = {
   entry: {
@@ -20,6 +20,17 @@ module.exports = {
       {
         test: /\.css$/,
         use: 'css-loader'
+      },
+      {
+        test: /\.txt$/,
+        use: ['raw-loader',
+          {
+            loader: path.resolve('./loader/myloader.js'),
+            options: {
+              "name": 'Luis'
+            }
+          }
+        ]
       }
     ]
   }

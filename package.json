@@ -7,7 +7,11 @@
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
     "start:build": "webpack --mode production -c ./webpack.prod.js",
-    "start:dev": "webpack --mode development -c ./webpack.dev.js -w"
+    "start:dev": "webpack --mode development -c ./webpack.dev.js -w",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -23,8 +27,14 @@
   },
   "homepage": "https://github.com/luisprooc/webpack-learning#readme",
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-jest": "^27.3.1",
     "css-loader": "^6.5.0",
-    "webpack": "^5.54.0",
+    "jest": "^27.3.1",
+    "memfs": "^3.3.0",
+    "raw-loader": "^4.0.2",
+    "webpack": "^5.60.0",
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
